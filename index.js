@@ -30,3 +30,9 @@ app.get('/',function(req,res){
     console.log("****************** POST request ***********"+JSON.stringify(req));
 
 });
+app.post('/injest',function (req,res) {
+
+  console.log("****************** recieved body ***********"+req.body);
+  console.log("****************** recieved body ***********"+req.header);
+
+});
