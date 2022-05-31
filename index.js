@@ -32,7 +32,7 @@ app.get('/',function(req,res){
 });
 app.post('/injest',function (req,res) {
 
-  console.log("****************** recieved body ***********"+req.body);
-  console.log("****************** recieved body ***********"+req.header);
+  console.log("****************** recieved body ***********"+JSON.stringify(req.body));
+  console.log("****************** recieved body ***********"+JSON.stringify(req.headers));
 
 });
