@@ -27,6 +27,6 @@ app.get('/',function(req,res){
   });
   app.post('/',function (req,res) {
 
-    console.log("****************** POST request ***********");
+    console.log("****************** POST request ***********"+JSON.stringify(req));
 
 });
