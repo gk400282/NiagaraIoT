@@ -1,4 +1,4 @@
-const https = require("https");
+const http = require("http");
 const fs = require("fs");
 
 const express = require("express");
@@ -8,14 +8,9 @@ const app = express();
 //     console.log('server is runing at pport 4000')
 // });
 
-https
+http
   .createServer(
-		// Provide the private and public key to the server by reading each
-		// file's content with the readFileSync() method.
-    {
-      key: fs.readFileSync("key.pem"),
-      cert: fs.readFileSync("cert.pem"),
-    },
+
     app
   )
   .listen(4000, () => {
