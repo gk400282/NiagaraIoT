@@ -36,6 +36,17 @@ function dbConnector() {
         pointDb.all("SELECT * from pointInfo WHERE point_id=?", point.point_id,cb);
     }
 
+    function fetchAll(callback) {
+        var cb = function (err, results) {
+           
+            if(results.length == 0){
+                console.log("error occured in fetch" +err+ "     " +results );
+                err = 400;
+            }
+            callback(err, results);
+        }
+        pointDb.all("SELECT * from pointInfo",cb);
+    }
 
     function closeDb(callback) {
        
@@ -50,6 +61,7 @@ function dbConnector() {
         updateDb : updateDb,
         closeDb : closeDb,
         fetchDb : fetchDb,
+        fetchAll : fetchAll
     }
 
 }

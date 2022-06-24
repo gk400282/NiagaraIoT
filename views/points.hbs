@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <title>
+        {{subject}}
+    </title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-2">
+        <header>
+            <h2>Welcome</h2>
+            </p>
+        </header>
+        <div>
+            <table>
+                <tr>
+                    <th>Point Name</th>
+                    <th>Out Value</th>
+                </tr>
+                {{#each points}}
+                <tr>
+                    <td>{{point_name}}</td>
+                    <td>{{outvalue}}</td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
